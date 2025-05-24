@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>La Banque Postale - Connexion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .container {
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      max-width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    footer {
+      font-size: 10px;
+      color: gray;
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>La Banque Postale</h1>
+</header>
+
+<div class="container">
+  <h2>Connexion client</h2>
+  <input type="text" id="identifiant" placeholder="Identifiant">
+  <input type="password" id="code" placeholder="Code personnel">
+  <button onclick="validerConnexion()">Se connecter</button>
+  <div class="message" id="message"></div>
+</div>
+
+<footer>
+  ISR<br>
+  Crédits consommation<br>
+  Prêt personnel Projet<br>
+  Prêt personnel Auto<br>
+  Prêt personnel Véhicule vert<br>
+  Prêt personnel Travaux<br>
+  Prêt personnel Travaux vert<br>
+  Rachat de crédit<br>
+  Prêt personnel Étudiant<br>
+  Prêts immobiliers<br>
+  Prêt habitat taux fixe<br>
+  Prêt à taux zéro<br>
+  Éco prêt à taux zéro<br>
+  Assurances<br>
+  Assurance Auto<br>
+  Assurance Habitation<br>
+  Assurance Santé<br>
+  Assurance 2 roues<br>
+  Protection juridique<br>
+  Assurance des Appareils Nomades<br>
+  (1) Offre réservée aux particuliers [...]<br><br>
+
+  Mentions légales :<br>
+  Prêteur : LA BANQUE POSTALE CONSUMER FINANCE [...]<br><br>
+
+  La Banque Postale<br>
+  Née en 2006, notre banque a grandi avec vous. [...]
+</footer>
+
+<script>
+function validerConnexion() {
+  const identifiant = document.getElementById("identifiant").value;
+  const code = document.getElementById("code").value;
+  const message = document.getElementById("message");
+
+  // Simule une validation : identifiant = "client" et code = "1234"
+  if (identifiant === "client" && code === "1234") {
+    message.style.color = "green";
+    message.textContent = "✅ Connexion réussie !";
+  } else {
+    message.style.color = "red";
+    message.textContent = "❌ Identifiant ou code incorrect.";
+  }
+}
+</script>
+
+</body>
+</html>
